@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Segoe UI", sans-serif;
+    text-align: center;
+    background-color: #b7ddea;
+    color: #1c1c1c;
+    transition: background-color 0.4s ease;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #fffdf8;
+    padding: 40px 45px;
+    border: 1px solid #ded6c8;
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    margin: 0 0 30px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    color: #171717;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 2px;
+    background: #b49a67;
+    margin: 18px auto 0;
+}
+
+.product-preview {
+    position: relative;
+    padding: 25px 20px 30px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e2ddd3;
+}
+
+.product-preview img {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+
+    border: 3px solid #000000;
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    padding: 8px;
+
+    transition: transform 0.4s ease;
+}
+
+.product-preview img:hover {
+    transform: scale(1.03);
+}
+
+.product-preview h2 {
+    margin: 10px 0;
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #202020;
+}
+
+.product-preview p {
+    margin: 8px 0;
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: #8a744d;
+    font-weight: bold;
+}
+
+.product-preview::before {
+    content: "SALE 10%";
+    position: absolute;
+    top: 15px;
+    right: 5px;
+
+    background: linear-gradient(135deg, #d71920, #f2b01e);
+    color: #ffffff;
+
+    padding: 8px 13px;
+
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.form-group {
+    margin: 22px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group label {
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    text-align: left;
+}
+
+input[type="number"],
+select {
+    width: 240px;
+    padding: 12px 14px;
+
+    border: 1px solid #cfc6b8;
+    border-radius: 3px;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #b49a67;
+    box-shadow: 0 0 0 3px rgba(180, 154, 103, 0.12);
+}
+
+.btn {
+    display: inline-block;
+
+    min-width: 190px;
+
+    padding: 13px 28px;
+    margin: 18px 0;
+
+    border: 1px solid #1d1d1d;
+    border-radius: 2px;
+
+    background: #1d1d1d;
+    color: #ffffff;
+
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #b49a67;
+    border-color: #b49a67;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.result {
+    margin: 20px auto 30px;
+
+    padding: 20px;
+
+    background: #f8f5ef;
+
+    border: 1px solid #e1dbd0;
+    border-radius: 3px;
+
+    text-align: left;
+}
+
+.result p {
+    margin: 9px 0;
+
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 15px;
+
+    color: #444444;
+}
+
+.result p:last-child {
+    padding-top: 12px;
+    margin-top: 12px;
+
+    border-top: 1px solid #d8d0c3;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    color: #1d1d1d;
+}
+
+.result span {
+    float: right;
+
+    color: #8a744d;
+
+    font-weight: bold;
+}
+
+h3 {
+    margin: 25px 0 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    color: #222222;
+}
+
+.color-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.color-buttons button {
+    min-width: 90px;
+
+    padding: 9px 15px;
+
+    border: 1px solid #cfc6b8;
+    border-radius: 2px;
+
+    background: #ffffff;
+    color: #333333;
+
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.color-buttons button:hover {
+    background: #1d1d1d;
+    color: #ffffff;
+
+    border-color: #1d1d1d;
+}
+
+#bangGiaList {
+    width: 100%;
+    margin: 20px auto 0;
+    overflow-x: auto;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffdf8;
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 14px;
+}
+
+.price-table th {
+    padding: 14px 10px;
+    background: #1d1d1d;
+    color: #ffffff;
+    border: 1px solid #1d1d1d;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.price-table td {
+    padding: 14px 10px;
+    border: 1px solid #d8d0c3;
+    color: #333333;
+    text-align: center;
+}
+
+.price-table td:first-child {
+    font-weight: bold;
+    color: #1d1d1d;
+}
+
+.price-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.price-table tbody tr:hover {
+    background-color: #f5f0e7;
+}
+
+.price-table .sale {
+    color: #c00000;
+    font-weight: bold;
+}
+
+.price-table .final-price {
+    color: #8a744d;
+    font-weight: bold;
+}
+
+.price-table tbody tr:last-child td {
+    border-bottom: 2px solid #b49a67;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+
+    .product-preview img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .product-preview::before {
+        top: 10px;
+        right: 0;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    input[type="number"],
+    select {
+        width: 100%;
+    }
+
+    .color-buttons {
+        flex-wrap: wrap;
+    }
+}

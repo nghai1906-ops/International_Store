@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERNATIONAL STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>INTERNATIONAL STORE</h1>
+
+        <div class="product-preview">
+            <img id="productImg" src="anhThoitrangcuaHai/aoblack.webp" alt="Sản phẩm" width="200">
+            <h2 id="productName">Jacket Crows Black</h2>
+            <p id="productPriceText">Giá: 550000 VNĐ</p>
+        </div>
+
+        <div class="form-group">
+            <label for="productSelect">Chọn sản phẩm:</label>
+            <select id="productSelect" onchange="doiSanPham()">
+                <option value="ao">Áo</option>
+                <option value="quan">Quần</option>
+                <option value="set">Sets</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Số lượng:</label>
+            <input type="number" id="quantity" value="1" min="1">
+        </div>
+
+        <button class="btn" onclick="tinhTien()">Tính tiền</button>
+
+        <div class="result">
+            <p>Tiền hàng: <span id="tienHang">0 VNĐ</span></p>
+            <p>Giảm giá: <span id="giamGia">0 VNĐ</span></p>
+            <p class="final-price">Phải trả: <span id="phaiTra">0 VNĐ</span></p>
+        </div>
+
+        <hr>
+
+        <h3>Đổi màu giao diện</h3>
+        <div class="color-buttons">
+            <button onclick="doiMau('white')">Trắng</button>
+            <button onclick="doiMau('black')">Đen</button>
+            <button onclick="doiMau('lightblue')">Xanh</button>
+            <button onclick="doiMau('lightpink')">Hồng</button>
+            <button onclick="doiMau('lightyellow')">Vàng</button>
+            <button onclick="doiMau('lightgrey')">Xám</button>
+        </div>
+
+        <hr>
+
+        <h3>Bảng giá</h3>
+        <button class="btn" onclick="xemBangGia()">Xem bảng giá</button>
+        <div id="bangGiaList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
